@@ -245,4 +245,16 @@ Note:
 - selber betreibbar (Binary Cache)
 <img class="plain" src="hydra.png" height="400px"></img>
 
-<!-- wo eigenet sich NixOS, wo nicht. -->
+
+## Praxisteil
+
+Zwischenfragen?
+
+<!--
+- nixos 
+- nix-shell
+- nix shebang
+- nixops
+
+wo eigenet sich NixOS, wo nicht.
+ -->
