@@ -12,7 +12,7 @@ s: Öffne Vortragsmonitor
 
 **Slides:** https://github.com/Mic92/themenabend-nixos
 
-28. April 2008
+28. April 2017
 
 <img class="plain" src="nixos.png" height="150" width="150"></img>
 
@@ -20,13 +20,13 @@ Note:
 - Ich Nixpkgs maintainer
 
 
-## Das Nixprojekt
+## Das Nix-Projekt
 
-- Nix: ein funktionaler Packetmanager und Buildsprache <img style="float: right" class="plain" src="topologie.svg"></img>
-- Nixpkgs: Nix-Packetsammlung
-- NixOS: eine Nix-basierte Linuxdistribution
-- Hydra: ein Nix-basiertes verteiltes Buildsystem (CI)
-- NixOps: Nixos-basiertes Deploymenttool
+- Nix: das System zur funktionalen Verwaltung von Paketen (package management) mit einer eigenen dafür verwendeten Sprache zum Bauen von Paketen<img style="float: right" class="plain" src="topologie.svg"></img>
+- Nixpkgs: die Sammlung von Paketen, die mit Nix verwaltet werden können
+- NixOS: die auf Nix basierende Distribution (für die Verwendung von Linux)
+- Hydra: ein auf Nix basiertes System zum verteilten Bauen von Paketen (CI)
+- NixOps: ein auf NixOS basiertes Werkzeug für das Einrichten von Instanzen
 
 Note:
 - Nix: Edolstra, 2006
@@ -36,14 +36,14 @@ Note:
 ## Besonderheiten von Nix
 
 - *generisch:* sprach- und technologieagnostisch
-- *reproduzierbar:* Selbe Eingabe -> Selbe Ausgabe
-- *verlässlich:* alle Abhängigkeiten vollständig, atomare Upgrades/Rollbacks
-- *effizient:* Nur notwendig Upgradeschritte
+- *reproduzierbar:* selbe Eingabe führt zur selben Ausgabe
+- *verlässlich:* alle Abhängigkeiten sind vollständig: atomare Aktualisierungen und mögliches Zurückwechseln (Rollbacks)
+- *effizient:* nur notwendig Schritte für Aktualisierungen
 
 Note:
-- reproduzierbar: keine Wechselwirkungen zwischen Packeten
-- atomare: altes bleibt erhalten
-- effizient: beim Packetneubau und Upgrade
+- reproduzierbar: keine Wechselwirkungen zwischen Paketen
+- atomar: vorherige Stände bleiben erhalten
+- effizient: beim Neubauen und Aktualisieren von Paketen
 
 
 ## NixOS - Konfiguration
