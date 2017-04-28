@@ -182,8 +182,10 @@ stdenv.mkDerivation {
 ```
 
 Note:
+- Reihenfolge wird erkannt
 - automatisch runtime deps
 - dev-output
+- weiß wann neugebaut werden muss (keine maintainer revisions)
 
 
 ## Nix - Expressions
@@ -208,13 +210,39 @@ $ nix-env -f all-packages.nix -iA openssh
 /nix/store/l9w6773m1msy...-openssh-4.6p1
 ```
 
+Note:
+- lazy ausgewertet
+
+
+## Nixpkgs 
+
+- github.com/NixOS/nixpkgs
+- \>13.000 Packete für x86_64 linux
+- https://nixos.org/nixos/packages.html
+- Abstraktionen für die meisten Buildsysteme
+  - (\*alle\* Haskellpackete)
+- Aktuelle unterstützte Platformen (Binärpackete)
+  * Linux: i686, x86_64, (aarch64)
+  * Mac OS X: x86_64
+
+
+## nixpkgs/nixos
+
+- NixOS ist Bestandteil von Nixpkgs
+- 689 Module:
+  - Systemeinstellungen (Zeitzone, Fonts, Benutzer)
+  - Services (sshd, nginx, openstack, gitlab, ...)
+- Stable- und Unstablechannel
+- jährlich 2 x Release (17.03 -> 17.09)
+
+Note:
+- Stable und unstable (mischbar)
+
 
 ## Hydra
 
-<img class="plain" src="hydra.png"></img>
-
-Note:
-- Reihenfolge wird erkannt
-- weiß wann neugebaut werden muss (keine maintainer revisions)
+- Baut alle Packete
+- selber betreibbar (Binary Cache)
+<img class="plain" src="hydra.png" height="400px"></img>
 
 <!-- wo eigenet sich NixOS, wo nicht. -->
